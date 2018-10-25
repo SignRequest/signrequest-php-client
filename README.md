@@ -14,14 +14,8 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 
 ```
 {
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/SignRequest/signrequest-php-client.git"
-    }
-  ],
   "require": {
-    "SignRequest/signrequest-php-client": "*@dev"
+    "signrequest/signrequest-client": "1.0.*"
   }
 }
 ```
