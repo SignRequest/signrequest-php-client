@@ -1,7 +1,7 @@
 {
-  "name": "SignRequest/signrequest-php-client",
+  "name": "signrequest/signrequest-client",
   "version": "1.0.0",
-  "description": "Official PHP client for SignRequest API (https://signrequest.com)",
+  "description": "Official PHP client for SignRequest.com (https://signrequest.com)",
   "keywords": [
     "signrequest",
     "php",
