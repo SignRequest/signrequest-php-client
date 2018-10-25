@@ -57,19 +57,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = SignRequest\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 $config = SignRequest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Token');
 
-$apiInstance = new SignRequest\Api\ApiTokensApi(
+$apiInstance = new SignRequest\Api\DocumentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$data = new \SignRequest\Model\AuthToken(); // \SignRequest\Model\AuthToken |
+$data = new \SignRequest\Model\Document(); // \SignRequest\Model\Document |
+$data->setFileFromUrl('https://docs.google.com/document/d/1oI2R1SxfMNZXiz3jCQvorpoklF9xq_dCJnOpkI-zo80/edit?usp=sharing');
 
 try {
-    $result = $apiInstance->apiTokensCreate($data);
+    $result = $apiInstance->documentsCreate($data);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ApiTokensApi->apiTokensCreate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DocumentsApi->documentsCreate: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
