@@ -1,6 +1,8 @@
 # signrequest-php-client
 
-API for SignRequest.com
+API for [SignRequest.com](https://signrequest.com/)
+
+[![PHP version](https://badge.fury.io/ph/signrequest%2Fsignrequest-client.svg)](https://badge.fury.io/ph/signrequest%2Fsignrequest-client)
 
 ## Requirements
 
@@ -38,6 +40,10 @@ To run the unit tests:
 composer install
 ./vendor/bin/phpunit
 ```
+
+## API Documentation
+Full API documentation, including code samples, can be found here:
+https://signrequest.com/api/v1/docs/
 
 ## Getting Started
 
