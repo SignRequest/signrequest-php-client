@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * DocumentTeam
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \SignRequest\ObjectSerializer;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * DocumentTeam Class Doc Comment
  *
  * @category Class
  * @package  SignRequest
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ModelInterface, ArrayAccess
+class DocumentTeam implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'Document_team';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'count' => 'int',
-        'next' => 'string',
-        'previous' => 'string',
-        'results' => '\SignRequest\Model\Event[]'
+        'name' => 'string',
+        'subdomain' => 'string',
+        'url' => 'string'
     ];
 
     /**
@@ -69,10 +68,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'count' => null,
-        'next' => 'uri',
-        'previous' => 'uri',
-        'results' => null
+        'name' => null,
+        'subdomain' => 'slug',
+        'url' => 'uri'
     ];
 
     /**
@@ -102,10 +100,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'count' => 'count',
-        'next' => 'next',
-        'previous' => 'previous',
-        'results' => 'results'
+        'name' => 'name',
+        'subdomain' => 'subdomain',
+        'url' => 'url'
     ];
 
     /**
@@ -114,10 +111,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'count' => 'setCount',
-        'next' => 'setNext',
-        'previous' => 'setPrevious',
-        'results' => 'setResults'
+        'name' => 'setName',
+        'subdomain' => 'setSubdomain',
+        'url' => 'setUrl'
     ];
 
     /**
@@ -126,10 +122,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'count' => 'getCount',
-        'next' => 'getNext',
-        'previous' => 'getPrevious',
-        'results' => 'getResults'
+        'name' => 'getName',
+        'subdomain' => 'getSubdomain',
+        'url' => 'getUrl'
     ];
 
     /**
@@ -192,10 +187,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['next'] = isset($data['next']) ? $data['next'] : null;
-        $this->container['previous'] = isset($data['previous']) ? $data['previous'] : null;
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['subdomain'] = isset($data['subdomain']) ? $data['subdomain'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -207,12 +201,18 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['count'] === null) {
-            $invalidProperties[] = "'count' can't be null";
+        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
         }
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
+
+        if (!is_null($this->container['subdomain']) && (mb_strlen($this->container['subdomain']) < 1)) {
+            $invalidProperties[] = "invalid value for 'subdomain', the character length must be bigger than or equal to 1.";
         }
+
+        if (!is_null($this->container['subdomain']) && !preg_match("/^[-a-zA-Z0-9_]+$/", $this->container['subdomain'])) {
+            $invalidProperties[] = "invalid value for 'subdomain', must be conform to the pattern /^[-a-zA-Z0-9_]+$/.";
+        }
+
         return $invalidProperties;
     }
 
@@ -229,97 +229,86 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets count
-     *
-     * @return int
-     */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-     * Sets count
-     *
-     * @param int $count count
-     *
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        $this->container['count'] = $count;
-
-        return $this;
-    }
-
-    /**
-     * Gets next
+     * Gets name
      *
      * @return string
      */
-    public function getNext()
+    public function getName()
     {
-        return $this->container['next'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets next
+     * Sets name
      *
-     * @param string $next next
+     * @param string $name name
      *
      * @return $this
      */
-    public function setNext($next)
+    public function setName($name)
     {
-        $this->container['next'] = $next;
+
+        if (!is_null($name) && (mb_strlen($name) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $name when calling DocumentTeam., must be bigger than or equal to 1.');
+        }
+
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets previous
+     * Gets subdomain
      *
      * @return string
      */
-    public function getPrevious()
+    public function getSubdomain()
     {
-        return $this->container['previous'];
+        return $this->container['subdomain'];
     }
 
     /**
-     * Sets previous
+     * Sets subdomain
      *
-     * @param string $previous previous
+     * @param string $subdomain subdomain
      *
      * @return $this
      */
-    public function setPrevious($previous)
+    public function setSubdomain($subdomain)
     {
-        $this->container['previous'] = $previous;
+
+        if (!is_null($subdomain) && (mb_strlen($subdomain) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $subdomain when calling DocumentTeam., must be bigger than or equal to 1.');
+        }
+        if (!is_null($subdomain) && (!preg_match("/^[-a-zA-Z0-9_]+$/", $subdomain))) {
+            throw new \InvalidArgumentException("invalid value for $subdomain when calling DocumentTeam., must conform to the pattern /^[-a-zA-Z0-9_]+$/.");
+        }
+
+        $this->container['subdomain'] = $subdomain;
 
         return $this;
     }
 
     /**
-     * Gets results
+     * Gets url
      *
-     * @return \SignRequest\Model\Event[]
+     * @return string
      */
-    public function getResults()
+    public function getUrl()
     {
-        return $this->container['results'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets results
+     * Sets url
      *
-     * @param \SignRequest\Model\Event[] $results results
+     * @param string $url url
      *
      * @return $this
      */
-    public function setResults($results)
+    public function setUrl($url)
     {
-        $this->container['results'] = $results;
+        $this->container['url'] = $url;
 
         return $this;
     }

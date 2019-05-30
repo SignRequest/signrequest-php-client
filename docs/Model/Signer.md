@@ -31,11 +31,13 @@ Name | Type | Description | Notes
 **message** | **string** |  | [optional] 
 **embed_url_user_id** | **string** |  | [optional] 
 **inputs** | [**\SignRequest\Model\SignerInputs[]**](SignerInputs.md) |  | [optional] 
+**use_stamp_for_approve_only** | **bool** | Place an approval stamp on a document when a signer approves a document | [optional] 
 **embed_url** | **string** |  | [optional] 
 **attachments** | [**\SignRequest\Model\SignerAttachment[]**](SignerAttachment.md) |  | [optional] 
 **redirect_url** | **string** |  | [optional] 
 **after_document** | **string** |  | [optional] 
 **integrations** | [**\SignRequest\Model\InlineDocumentSignerIntegrationData[]**](InlineDocumentSignerIntegrationData.md) |  | [optional] 
+**password** | **string** | Require the signer to enter this password before signing a document. This field is write only. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

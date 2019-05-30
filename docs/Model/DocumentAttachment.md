@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **string** |  | [optional] 
 **uuid** | **string** |  | [optional] 
-**name** | **string** | Defaults to filename | [optional] 
+**name** | **string** | Defaults to filename, including extension | [optional] 
 **file** | **string** | Temporary URL to document attachment, expires in five minutes | [optional] 
 **file_from_content** | **string** | Base64 encoded document content | [optional] 
 **file_from_content_name** | **string** | Filename, including extension. Required when using &#x60;file_from_content&#x60;. | [optional] 

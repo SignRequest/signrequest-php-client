@@ -1,4 +1,4 @@
-# InlineSignRequest
+# DocumentSignrequest
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * DocumentSigningLog
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \SignRequest\ObjectSerializer;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * DocumentSigningLog Class Doc Comment
  *
  * @category Class
  * @package  SignRequest
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ModelInterface, ArrayAccess
+class DocumentSigningLog implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'Document_signing_log';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'count' => 'int',
-        'next' => 'string',
-        'previous' => 'string',
-        'results' => '\SignRequest\Model\Event[]'
+        'pdf' => 'string',
+        'security_hash' => 'string'
     ];
 
     /**
@@ -69,10 +67,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'count' => null,
-        'next' => 'uri',
-        'previous' => 'uri',
-        'results' => null
+        'pdf' => 'uri',
+        'security_hash' => null
     ];
 
     /**
@@ -102,10 +98,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'count' => 'count',
-        'next' => 'next',
-        'previous' => 'previous',
-        'results' => 'results'
+        'pdf' => 'pdf',
+        'security_hash' => 'security_hash'
     ];
 
     /**
@@ -114,10 +108,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'count' => 'setCount',
-        'next' => 'setNext',
-        'previous' => 'setPrevious',
-        'results' => 'setResults'
+        'pdf' => 'setPdf',
+        'security_hash' => 'setSecurityHash'
     ];
 
     /**
@@ -126,10 +118,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'count' => 'getCount',
-        'next' => 'getNext',
-        'previous' => 'getPrevious',
-        'results' => 'getResults'
+        'pdf' => 'getPdf',
+        'security_hash' => 'getSecurityHash'
     ];
 
     /**
@@ -192,10 +182,8 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
-        $this->container['next'] = isset($data['next']) ? $data['next'] : null;
-        $this->container['previous'] = isset($data['previous']) ? $data['previous'] : null;
-        $this->container['results'] = isset($data['results']) ? $data['results'] : null;
+        $this->container['pdf'] = isset($data['pdf']) ? $data['pdf'] : null;
+        $this->container['security_hash'] = isset($data['security_hash']) ? $data['security_hash'] : null;
     }
 
     /**
@@ -207,12 +195,10 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['count'] === null) {
-            $invalidProperties[] = "'count' can't be null";
+        if (!is_null($this->container['security_hash']) && (mb_strlen($this->container['security_hash']) < 1)) {
+            $invalidProperties[] = "invalid value for 'security_hash', the character length must be bigger than or equal to 1.";
         }
-        if ($this->container['results'] === null) {
-            $invalidProperties[] = "'results' can't be null";
-        }
+
         return $invalidProperties;
     }
 
@@ -229,97 +215,54 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets count
-     *
-     * @return int
-     */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-     * Sets count
-     *
-     * @param int $count count
-     *
-     * @return $this
-     */
-    public function setCount($count)
-    {
-        $this->container['count'] = $count;
-
-        return $this;
-    }
-
-    /**
-     * Gets next
+     * Gets pdf
      *
      * @return string
      */
-    public function getNext()
+    public function getPdf()
     {
-        return $this->container['next'];
+        return $this->container['pdf'];
     }
 
     /**
-     * Sets next
+     * Sets pdf
      *
-     * @param string $next next
+     * @param string $pdf Temporary URL to signing log, expires in five minutes
      *
      * @return $this
      */
-    public function setNext($next)
+    public function setPdf($pdf)
     {
-        $this->container['next'] = $next;
+        $this->container['pdf'] = $pdf;
 
         return $this;
     }
 
     /**
-     * Gets previous
+     * Gets security_hash
      *
      * @return string
      */
-    public function getPrevious()
+    public function getSecurityHash()
     {
-        return $this->container['previous'];
+        return $this->container['security_hash'];
     }
 
     /**
-     * Sets previous
+     * Sets security_hash
      *
-     * @param string $previous previous
+     * @param string $security_hash SHA256 hash of PDF contents
      *
      * @return $this
      */
-    public function setPrevious($previous)
+    public function setSecurityHash($security_hash)
     {
-        $this->container['previous'] = $previous;
 
-        return $this;
-    }
+        if (!is_null($security_hash) && (mb_strlen($security_hash) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $security_hash when calling DocumentSigningLog., must be bigger than or equal to 1.');
+        }
 
-    /**
-     * Gets results
-     *
-     * @return \SignRequest\Model\Event[]
-     */
-    public function getResults()
-    {
-        return $this->container['results'];
-    }
-
-    /**
-     * Sets results
-     *
-     * @param \SignRequest\Model\Event[] $results results
-     *
-     * @return $this
-     */
-    public function setResults($results)
-    {
-        $this->container['results'] = $results;
+        $this->container['security_hash'] = $security_hash;
 
         return $this;
     }
