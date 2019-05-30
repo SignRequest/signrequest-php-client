@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **disable_date** | **bool** | Disable adding of dates | [optional] 
 **disable_emails** | **bool** | Disable all SignRequest status emails as well as the email that contains the signed documents | [optional] 
 **disable_upload_signatures** | **bool** | Disable usage of uploaded signatures (images) | [optional] 
+**disable_blockchain_proof** | **bool** | Disables storing timestamp proof hashes in blockchain integrations. | [optional] 
+**text_message_verification_locked** | **bool** | When true a text message verification is needed before the signer can see the document | [optional] 
 **subject** | **string** | Subject of SignRequest email | [optional] 
 **message** | **string** | Message to include in SignRequest email, may contain the following html tags: &#x60;a&#x60;, &#x60;abbr&#x60;, &#x60;acronym&#x60;, &#x60;b&#x60;, &#x60;blockquote&#x60;, &#x60;code&#x60;, &#x60;em&#x60;, &#x60;i&#x60;, &#x60;ul&#x60;, &#x60;li&#x60;, &#x60;ol&#x60;, and &#x60;strong&#x60; | [optional] 
 **who** | **string** | &#x60;m&#x60;: only me, &#x60;mo&#x60;: me and others, &#x60;o&#x60;: only others | [optional] [default to 'o']

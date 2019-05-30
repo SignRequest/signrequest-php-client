@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **delivered_on** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **callback_status_code** | **int** |  | [optional] 
 **timestamp** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**team** | [**\SignRequest\Model\DocumentTeam**](DocumentTeam.md) |  | [optional] 
 **document** | [**\SignRequest\Model\Document**](Document.md) |  | [optional] 
 **signer** | [**\SignRequest\Model\Signer**](Signer.md) |  | [optional] 
 

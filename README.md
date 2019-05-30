@@ -17,7 +17,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
 ```
 {
   "require": {
-    "signrequest/signrequest-client": "1.0.*"
+    "signrequest/signrequest-client": "1.1.*"
   }
 }
 ```

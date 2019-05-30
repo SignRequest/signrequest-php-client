@@ -5,6 +5,7 @@ All URIs are relative to *https://signrequest.com/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**teamsCreate**](TeamsApi.md#teamsCreate) | **POST** /teams/ | Create a Team
+[**teamsDelete**](TeamsApi.md#teamsDelete) | **DELETE** /teams/{subdomain}/ | Delete a Team
 [**teamsInviteMember**](TeamsApi.md#teamsInviteMember) | **POST** /teams/{subdomain}/invite_member/ | Invite a Team Member
 [**teamsList**](TeamsApi.md#teamsList) | **GET** /teams/ | Retrieve a list of Teams
 [**teamsPartialUpdate**](TeamsApi.md#teamsPartialUpdate) | **PATCH** /teams/{subdomain}/ | Update a Team
@@ -53,6 +54,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\SignRequest\Model\Team**](../Model/Team.md)
+
+### Authorization
+
+[Token](../../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **teamsDelete**
+> teamsDelete($subdomain)
+
+Delete a Team
+
+Required fields are **name** and **subdomain** where the subdomain is globally unique. Use **POST** to create a Team. To update a field on a Team use **PATCH**.  To use the API on behalf of a particular team change the endpoint to: *https://_**{{ subdomain }}**.signrequest.com/api/v1/...*  To invite new team members you can use **POST** {\"email\":\"**email-of-member-to-invite@example.com**\",\"is_admin\":false,\"is_owner\":false} to: *https://signrequest.com/api/v1/teams/_**{{ subdomain }}**_/invite_member/_*
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: Token
+$config = SignRequest\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = SignRequest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Token');
+
+$apiInstance = new SignRequest\Api\TeamsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$subdomain = "subdomain_example"; // string | 
+
+try {
+    $apiInstance->teamsDelete($subdomain);
+} catch (Exception $e) {
+    echo 'Exception when calling TeamsApi->teamsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subdomain** | **string**|  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

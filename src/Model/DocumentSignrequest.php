@@ -1,6 +1,6 @@
 <?php
 /**
- * SignRequestQuickCreate
+ * DocumentSignrequest
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \SignRequest\ObjectSerializer;
 
 /**
- * SignRequestQuickCreate Class Doc Comment
+ * DocumentSignrequest Class Doc Comment
  *
  * @category Class
  * @package  SignRequest
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SignRequestQuickCreate implements ModelInterface, ArrayAccess
+class DocumentSignrequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'SignRequestQuickCreate';
+    protected static $swaggerModelName = 'Document_signrequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -76,25 +76,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         'who' => 'string',
         'send_reminders' => 'bool',
         'signers' => '\SignRequest\Model\Signer[]',
-        'uuid' => 'string',
-        'url' => 'string',
-        'document' => 'string',
-        'integration' => 'string',
-        'integration_data' => 'string',
-        'name' => 'string',
-        'external_id' => 'string',
-        'frontend_id' => 'string',
-        'file' => 'string',
-        'file_from_url' => 'string',
-        'events_callback_url' => 'string',
-        'file_from_content' => 'string',
-        'file_from_content_name' => 'string',
-        'template' => 'string',
-        'prefill_tags' => '\SignRequest\Model\InlinePrefillTags[]',
-        'integrations' => '\SignRequest\Model\InlineIntegrationData[]',
-        'file_from_sf' => '\SignRequest\Model\FileFromSf',
-        'auto_delete_days' => 'int',
-        'auto_expire_days' => 'int'
+        'uuid' => 'string'
     ];
 
     /**
@@ -122,25 +104,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         'who' => null,
         'send_reminders' => null,
         'signers' => null,
-        'uuid' => null,
-        'url' => 'uri',
-        'document' => 'uri',
-        'integration' => null,
-        'integration_data' => null,
-        'name' => null,
-        'external_id' => null,
-        'frontend_id' => null,
-        'file' => 'uri',
-        'file_from_url' => 'uri',
-        'events_callback_url' => 'uri',
-        'file_from_content' => null,
-        'file_from_content_name' => null,
-        'template' => 'uri',
-        'prefill_tags' => null,
-        'integrations' => null,
-        'file_from_sf' => null,
-        'auto_delete_days' => null,
-        'auto_expire_days' => null
+        'uuid' => null
     ];
 
     /**
@@ -189,25 +153,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         'who' => 'who',
         'send_reminders' => 'send_reminders',
         'signers' => 'signers',
-        'uuid' => 'uuid',
-        'url' => 'url',
-        'document' => 'document',
-        'integration' => 'integration',
-        'integration_data' => 'integration_data',
-        'name' => 'name',
-        'external_id' => 'external_id',
-        'frontend_id' => 'frontend_id',
-        'file' => 'file',
-        'file_from_url' => 'file_from_url',
-        'events_callback_url' => 'events_callback_url',
-        'file_from_content' => 'file_from_content',
-        'file_from_content_name' => 'file_from_content_name',
-        'template' => 'template',
-        'prefill_tags' => 'prefill_tags',
-        'integrations' => 'integrations',
-        'file_from_sf' => 'file_from_sf',
-        'auto_delete_days' => 'auto_delete_days',
-        'auto_expire_days' => 'auto_expire_days'
+        'uuid' => 'uuid'
     ];
 
     /**
@@ -235,25 +181,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         'who' => 'setWho',
         'send_reminders' => 'setSendReminders',
         'signers' => 'setSigners',
-        'uuid' => 'setUuid',
-        'url' => 'setUrl',
-        'document' => 'setDocument',
-        'integration' => 'setIntegration',
-        'integration_data' => 'setIntegrationData',
-        'name' => 'setName',
-        'external_id' => 'setExternalId',
-        'frontend_id' => 'setFrontendId',
-        'file' => 'setFile',
-        'file_from_url' => 'setFileFromUrl',
-        'events_callback_url' => 'setEventsCallbackUrl',
-        'file_from_content' => 'setFileFromContent',
-        'file_from_content_name' => 'setFileFromContentName',
-        'template' => 'setTemplate',
-        'prefill_tags' => 'setPrefillTags',
-        'integrations' => 'setIntegrations',
-        'file_from_sf' => 'setFileFromSf',
-        'auto_delete_days' => 'setAutoDeleteDays',
-        'auto_expire_days' => 'setAutoExpireDays'
+        'uuid' => 'setUuid'
     ];
 
     /**
@@ -281,25 +209,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         'who' => 'getWho',
         'send_reminders' => 'getSendReminders',
         'signers' => 'getSigners',
-        'uuid' => 'getUuid',
-        'url' => 'getUrl',
-        'document' => 'getDocument',
-        'integration' => 'getIntegration',
-        'integration_data' => 'getIntegrationData',
-        'name' => 'getName',
-        'external_id' => 'getExternalId',
-        'frontend_id' => 'getFrontendId',
-        'file' => 'getFile',
-        'file_from_url' => 'getFileFromUrl',
-        'events_callback_url' => 'getEventsCallbackUrl',
-        'file_from_content' => 'getFileFromContent',
-        'file_from_content_name' => 'getFileFromContentName',
-        'template' => 'getTemplate',
-        'prefill_tags' => 'getPrefillTags',
-        'integrations' => 'getIntegrations',
-        'file_from_sf' => 'getFileFromSf',
-        'auto_delete_days' => 'getAutoDeleteDays',
-        'auto_expire_days' => 'getAutoExpireDays'
+        'uuid' => 'getUuid'
     ];
 
     /**
@@ -346,11 +256,6 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     const WHO_M = 'm';
     const WHO_MO = 'mo';
     const WHO_O = 'o';
-    const INTEGRATION_MFILES = 'mfiles';
-    const INTEGRATION_SALESFORCE = 'salesforce';
-    const INTEGRATION_FORMDESK = 'formdesk';
-    const INTEGRATION_ZAPIER = 'zapier';
-    const INTEGRATION_TXHASH = 'txhash';
     
 
     
@@ -365,22 +270,6 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
             self::WHO_M,
             self::WHO_MO,
             self::WHO_O,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getIntegrationAllowableValues()
-    {
-        return [
-            self::INTEGRATION_MFILES,
-            self::INTEGRATION_SALESFORCE,
-            self::INTEGRATION_FORMDESK,
-            self::INTEGRATION_ZAPIER,
-            self::INTEGRATION_TXHASH,
         ];
     }
     
@@ -416,28 +305,10 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         $this->container['text_message_verification_locked'] = isset($data['text_message_verification_locked']) ? $data['text_message_verification_locked'] : null;
         $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['who'] = isset($data['who']) ? $data['who'] : 'o';
+        $this->container['who'] = isset($data['who']) ? $data['who'] : null;
         $this->container['send_reminders'] = isset($data['send_reminders']) ? $data['send_reminders'] : null;
         $this->container['signers'] = isset($data['signers']) ? $data['signers'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['document'] = isset($data['document']) ? $data['document'] : null;
-        $this->container['integration'] = isset($data['integration']) ? $data['integration'] : null;
-        $this->container['integration_data'] = isset($data['integration_data']) ? $data['integration_data'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['external_id'] = isset($data['external_id']) ? $data['external_id'] : null;
-        $this->container['frontend_id'] = isset($data['frontend_id']) ? $data['frontend_id'] : null;
-        $this->container['file'] = isset($data['file']) ? $data['file'] : null;
-        $this->container['file_from_url'] = isset($data['file_from_url']) ? $data['file_from_url'] : null;
-        $this->container['events_callback_url'] = isset($data['events_callback_url']) ? $data['events_callback_url'] : null;
-        $this->container['file_from_content'] = isset($data['file_from_content']) ? $data['file_from_content'] : null;
-        $this->container['file_from_content_name'] = isset($data['file_from_content_name']) ? $data['file_from_content_name'] : null;
-        $this->container['template'] = isset($data['template']) ? $data['template'] : null;
-        $this->container['prefill_tags'] = isset($data['prefill_tags']) ? $data['prefill_tags'] : null;
-        $this->container['integrations'] = isset($data['integrations']) ? $data['integrations'] : null;
-        $this->container['file_from_sf'] = isset($data['file_from_sf']) ? $data['file_from_sf'] : null;
-        $this->container['auto_delete_days'] = isset($data['auto_delete_days']) ? $data['auto_delete_days'] : null;
-        $this->container['auto_expire_days'] = isset($data['auto_expire_days']) ? $data['auto_expire_days'] : null;
     }
 
     /**
@@ -449,28 +320,28 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['from_email']) && (mb_strlen($this->container['from_email']) > 255)) {
-            $invalidProperties[] = "invalid value for 'from_email', the character length must be smaller than or equal to 255.";
-        }
-
         if (!is_null($this->container['from_email']) && (mb_strlen($this->container['from_email']) < 1)) {
             $invalidProperties[] = "invalid value for 'from_email', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['from_email_name']) && (mb_strlen($this->container['from_email_name']) > 255)) {
-            $invalidProperties[] = "invalid value for 'from_email_name', the character length must be smaller than or equal to 255.";
+        if (!is_null($this->container['from_email_name']) && (mb_strlen($this->container['from_email_name']) < 1)) {
+            $invalidProperties[] = "invalid value for 'from_email_name', the character length must be bigger than or equal to 1.";
         }
 
         if (!is_null($this->container['prepare_url']) && (mb_strlen($this->container['prepare_url']) < 1)) {
             $invalidProperties[] = "invalid value for 'prepare_url', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['redirect_url']) && (mb_strlen($this->container['redirect_url']) > 2100)) {
-            $invalidProperties[] = "invalid value for 'redirect_url', the character length must be smaller than or equal to 2100.";
+        if (!is_null($this->container['redirect_url']) && (mb_strlen($this->container['redirect_url']) < 1)) {
+            $invalidProperties[] = "invalid value for 'redirect_url', the character length must be bigger than or equal to 1.";
         }
 
-        if (!is_null($this->container['subject']) && (mb_strlen($this->container['subject']) > 512)) {
-            $invalidProperties[] = "invalid value for 'subject', the character length must be smaller than or equal to 512.";
+        if (!is_null($this->container['subject']) && (mb_strlen($this->container['subject']) < 1)) {
+            $invalidProperties[] = "invalid value for 'subject', the character length must be bigger than or equal to 1.";
+        }
+
+        if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 1)) {
+            $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 1.";
         }
 
         $allowedValues = $this->getWhoAllowableValues();
@@ -481,55 +352,8 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
             );
         }
 
-        if ($this->container['signers'] === null) {
-            $invalidProperties[] = "'signers' can't be null";
-        }
         if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) < 1)) {
             $invalidProperties[] = "invalid value for 'uuid', the character length must be bigger than or equal to 1.";
-        }
-
-        $allowedValues = $this->getIntegrationAllowableValues();
-        if (!is_null($this->container['integration']) && !in_array($this->container['integration'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'integration', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
-            $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['external_id']) && (mb_strlen($this->container['external_id']) > 255)) {
-            $invalidProperties[] = "invalid value for 'external_id', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['frontend_id']) && (mb_strlen($this->container['frontend_id']) > 255)) {
-            $invalidProperties[] = "invalid value for 'frontend_id', the character length must be smaller than or equal to 255.";
-        }
-
-        if (!is_null($this->container['file_from_url']) && (mb_strlen($this->container['file_from_url']) > 2100)) {
-            $invalidProperties[] = "invalid value for 'file_from_url', the character length must be smaller than or equal to 2100.";
-        }
-
-        if (!is_null($this->container['events_callback_url']) && (mb_strlen($this->container['events_callback_url']) > 2100)) {
-            $invalidProperties[] = "invalid value for 'events_callback_url', the character length must be smaller than or equal to 2100.";
-        }
-
-        if (!is_null($this->container['auto_delete_days']) && ($this->container['auto_delete_days'] > 730)) {
-            $invalidProperties[] = "invalid value for 'auto_delete_days', must be smaller than or equal to 730.";
-        }
-
-        if (!is_null($this->container['auto_delete_days']) && ($this->container['auto_delete_days'] < 1)) {
-            $invalidProperties[] = "invalid value for 'auto_delete_days', must be bigger than or equal to 1.";
-        }
-
-        if (!is_null($this->container['auto_expire_days']) && ($this->container['auto_expire_days'] > 730)) {
-            $invalidProperties[] = "invalid value for 'auto_expire_days', must be smaller than or equal to 730.";
-        }
-
-        if (!is_null($this->container['auto_expire_days']) && ($this->container['auto_expire_days'] < 1)) {
-            $invalidProperties[] = "invalid value for 'auto_expire_days', must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -566,11 +390,9 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
      */
     public function setFromEmail($from_email)
     {
-        if (!is_null($from_email) && (mb_strlen($from_email) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $from_email when calling SignRequestQuickCreate., must be smaller than or equal to 255.');
-        }
+
         if (!is_null($from_email) && (mb_strlen($from_email) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $from_email when calling SignRequestQuickCreate., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $from_email when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['from_email'] = $from_email;
@@ -597,8 +419,9 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
      */
     public function setFromEmailName($from_email_name)
     {
-        if (!is_null($from_email_name) && (mb_strlen($from_email_name) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $from_email_name when calling SignRequestQuickCreate., must be smaller than or equal to 255.');
+
+        if (!is_null($from_email_name) && (mb_strlen($from_email_name) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $from_email_name when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['from_email_name'] = $from_email_name;
@@ -651,7 +474,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     {
 
         if (!is_null($prepare_url) && (mb_strlen($prepare_url) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $prepare_url when calling SignRequestQuickCreate., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $prepare_url when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['prepare_url'] = $prepare_url;
@@ -678,8 +501,9 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
      */
     public function setRedirectUrl($redirect_url)
     {
-        if (!is_null($redirect_url) && (mb_strlen($redirect_url) > 2100)) {
-            throw new \InvalidArgumentException('invalid length for $redirect_url when calling SignRequestQuickCreate., must be smaller than or equal to 2100.');
+
+        if (!is_null($redirect_url) && (mb_strlen($redirect_url) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $redirect_url when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['redirect_url'] = $redirect_url;
@@ -700,7 +524,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     /**
      * Sets required_attachments
      *
-     * @param \SignRequest\Model\RequiredAttachment[] $required_attachments Attachments that signers are required to upload
+     * @param \SignRequest\Model\RequiredAttachment[] $required_attachments required_attachments
      *
      * @return $this
      */
@@ -922,8 +746,9 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
      */
     public function setSubject($subject)
     {
-        if (!is_null($subject) && (mb_strlen($subject) > 512)) {
-            throw new \InvalidArgumentException('invalid length for $subject when calling SignRequestQuickCreate., must be smaller than or equal to 512.');
+
+        if (!is_null($subject) && (mb_strlen($subject) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $subject when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['subject'] = $subject;
@@ -950,6 +775,11 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
      */
     public function setMessage($message)
     {
+
+        if (!is_null($message) && (mb_strlen($message) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $message when calling DocumentSignrequest., must be bigger than or equal to 1.');
+        }
+
         $this->container['message'] = $message;
 
         return $this;
@@ -1057,487 +887,10 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     {
 
         if (!is_null($uuid) && (mb_strlen($uuid) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $uuid when calling SignRequestQuickCreate., must be bigger than or equal to 1.');
+            throw new \InvalidArgumentException('invalid length for $uuid when calling DocumentSignrequest., must be bigger than or equal to 1.');
         }
 
         $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->container['url'];
-    }
-
-    /**
-     * Sets url
-     *
-     * @param string $url url
-     *
-     * @return $this
-     */
-    public function setUrl($url)
-    {
-        $this->container['url'] = $url;
-
-        return $this;
-    }
-
-    /**
-     * Gets document
-     *
-     * @return string
-     */
-    public function getDocument()
-    {
-        return $this->container['document'];
-    }
-
-    /**
-     * Sets document
-     *
-     * @param string $document document
-     *
-     * @return $this
-     */
-    public function setDocument($document)
-    {
-        $this->container['document'] = $document;
-
-        return $this;
-    }
-
-    /**
-     * Gets integration
-     *
-     * @return string
-     */
-    public function getIntegration()
-    {
-        return $this->container['integration'];
-    }
-
-    /**
-     * Sets integration
-     *
-     * @param string $integration integration
-     *
-     * @return $this
-     */
-    public function setIntegration($integration)
-    {
-        $allowedValues = $this->getIntegrationAllowableValues();
-        if (!is_null($integration) && !in_array($integration, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'integration', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['integration'] = $integration;
-
-        return $this;
-    }
-
-    /**
-     * Gets integration_data
-     *
-     * @return string
-     */
-    public function getIntegrationData()
-    {
-        return $this->container['integration_data'];
-    }
-
-    /**
-     * Sets integration_data
-     *
-     * @param string $integration_data integration_data
-     *
-     * @return $this
-     */
-    public function setIntegrationData($integration_data)
-    {
-        $this->container['integration_data'] = $integration_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Defaults to filename, including extension
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        if (!is_null($name) && (mb_strlen($name) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $name when calling SignRequestQuickCreate., must be smaller than or equal to 255.');
-        }
-
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets external_id
-     *
-     * @return string
-     */
-    public function getExternalId()
-    {
-        return $this->container['external_id'];
-    }
-
-    /**
-     * Sets external_id
-     *
-     * @param string $external_id ID used to reference document in external system
-     *
-     * @return $this
-     */
-    public function setExternalId($external_id)
-    {
-        if (!is_null($external_id) && (mb_strlen($external_id) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $external_id when calling SignRequestQuickCreate., must be smaller than or equal to 255.');
-        }
-
-        $this->container['external_id'] = $external_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets frontend_id
-     *
-     * @return string
-     */
-    public function getFrontendId()
-    {
-        return $this->container['frontend_id'];
-    }
-
-    /**
-     * Sets frontend_id
-     *
-     * @param string $frontend_id Shared secret used in conjunction with <a href=\"#section/Frontend-API/SignRequest-js-client-(beta)\">SignRequest-js client</a> to grant user access to a document that's not a member of the document's team
-     *
-     * @return $this
-     */
-    public function setFrontendId($frontend_id)
-    {
-        if (!is_null($frontend_id) && (mb_strlen($frontend_id) > 255)) {
-            throw new \InvalidArgumentException('invalid length for $frontend_id when calling SignRequestQuickCreate., must be smaller than or equal to 255.');
-        }
-
-        $this->container['frontend_id'] = $frontend_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets file
-     *
-     * @return string
-     */
-    public function getFile()
-    {
-        return $this->container['file'];
-    }
-
-    /**
-     * Sets file
-     *
-     * @param string $file Temporary URL to original file, expires in five minutes
-     *
-     * @return $this
-     */
-    public function setFile($file)
-    {
-        $this->container['file'] = $file;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_from_url
-     *
-     * @return string
-     */
-    public function getFileFromUrl()
-    {
-        return $this->container['file_from_url'];
-    }
-
-    /**
-     * Sets file_from_url
-     *
-     * @param string $file_from_url Publicly accessible URL of document to be downloaded by SignRequest
-     *
-     * @return $this
-     */
-    public function setFileFromUrl($file_from_url)
-    {
-        if (!is_null($file_from_url) && (mb_strlen($file_from_url) > 2100)) {
-            throw new \InvalidArgumentException('invalid length for $file_from_url when calling SignRequestQuickCreate., must be smaller than or equal to 2100.');
-        }
-
-        $this->container['file_from_url'] = $file_from_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets events_callback_url
-     *
-     * @return string
-     */
-    public function getEventsCallbackUrl()
-    {
-        return $this->container['events_callback_url'];
-    }
-
-    /**
-     * Sets events_callback_url
-     *
-     * @param string $events_callback_url URL at which to receive [event callbacks](#section/Events/Events-callback) for this document
-     *
-     * @return $this
-     */
-    public function setEventsCallbackUrl($events_callback_url)
-    {
-        if (!is_null($events_callback_url) && (mb_strlen($events_callback_url) > 2100)) {
-            throw new \InvalidArgumentException('invalid length for $events_callback_url when calling SignRequestQuickCreate., must be smaller than or equal to 2100.');
-        }
-
-        $this->container['events_callback_url'] = $events_callback_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_from_content
-     *
-     * @return string
-     */
-    public function getFileFromContent()
-    {
-        return $this->container['file_from_content'];
-    }
-
-    /**
-     * Sets file_from_content
-     *
-     * @param string $file_from_content Base64 encoded document content
-     *
-     * @return $this
-     */
-    public function setFileFromContent($file_from_content)
-    {
-        $this->container['file_from_content'] = $file_from_content;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_from_content_name
-     *
-     * @return string
-     */
-    public function getFileFromContentName()
-    {
-        return $this->container['file_from_content_name'];
-    }
-
-    /**
-     * Sets file_from_content_name
-     *
-     * @param string $file_from_content_name Filename, including extension. Required when using `file_from_content`.
-     *
-     * @return $this
-     */
-    public function setFileFromContentName($file_from_content_name)
-    {
-        $this->container['file_from_content_name'] = $file_from_content_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets template
-     *
-     * @return string
-     */
-    public function getTemplate()
-    {
-        return $this->container['template'];
-    }
-
-    /**
-     * Sets template
-     *
-     * @param string $template template
-     *
-     * @return $this
-     */
-    public function setTemplate($template)
-    {
-        $this->container['template'] = $template;
-
-        return $this;
-    }
-
-    /**
-     * Gets prefill_tags
-     *
-     * @return \SignRequest\Model\InlinePrefillTags[]
-     */
-    public function getPrefillTags()
-    {
-        return $this->container['prefill_tags'];
-    }
-
-    /**
-     * Sets prefill_tags
-     *
-     * @param \SignRequest\Model\InlinePrefillTags[] $prefill_tags Prefill signer input data, see [prefill tags](#section/Preparing-a-document/Prefill-tags-templates)
-     *
-     * @return $this
-     */
-    public function setPrefillTags($prefill_tags)
-    {
-        $this->container['prefill_tags'] = $prefill_tags;
-
-        return $this;
-    }
-
-    /**
-     * Gets integrations
-     *
-     * @return \SignRequest\Model\InlineIntegrationData[]
-     */
-    public function getIntegrations()
-    {
-        return $this->container['integrations'];
-    }
-
-    /**
-     * Sets integrations
-     *
-     * @param \SignRequest\Model\InlineIntegrationData[] $integrations integrations
-     *
-     * @return $this
-     */
-    public function setIntegrations($integrations)
-    {
-        $this->container['integrations'] = $integrations;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_from_sf
-     *
-     * @return \SignRequest\Model\FileFromSf
-     */
-    public function getFileFromSf()
-    {
-        return $this->container['file_from_sf'];
-    }
-
-    /**
-     * Sets file_from_sf
-     *
-     * @param \SignRequest\Model\FileFromSf $file_from_sf file_from_sf
-     *
-     * @return $this
-     */
-    public function setFileFromSf($file_from_sf)
-    {
-        $this->container['file_from_sf'] = $file_from_sf;
-
-        return $this;
-    }
-
-    /**
-     * Gets auto_delete_days
-     *
-     * @return int
-     */
-    public function getAutoDeleteDays()
-    {
-        return $this->container['auto_delete_days'];
-    }
-
-    /**
-     * Sets auto_delete_days
-     *
-     * @param int $auto_delete_days Number of days after which a finished document (signed/cancelled/declined) will be automatically deleted
-     *
-     * @return $this
-     */
-    public function setAutoDeleteDays($auto_delete_days)
-    {
-
-        if (!is_null($auto_delete_days) && ($auto_delete_days > 730)) {
-            throw new \InvalidArgumentException('invalid value for $auto_delete_days when calling SignRequestQuickCreate., must be smaller than or equal to 730.');
-        }
-        if (!is_null($auto_delete_days) && ($auto_delete_days < 1)) {
-            throw new \InvalidArgumentException('invalid value for $auto_delete_days when calling SignRequestQuickCreate., must be bigger than or equal to 1.');
-        }
-
-        $this->container['auto_delete_days'] = $auto_delete_days;
-
-        return $this;
-    }
-
-    /**
-     * Gets auto_expire_days
-     *
-     * @return int
-     */
-    public function getAutoExpireDays()
-    {
-        return $this->container['auto_expire_days'];
-    }
-
-    /**
-     * Sets auto_expire_days
-     *
-     * @param int $auto_expire_days Number of days after which a non finished document will be automatically expired
-     *
-     * @return $this
-     */
-    public function setAutoExpireDays($auto_expire_days)
-    {
-
-        if (!is_null($auto_expire_days) && ($auto_expire_days > 730)) {
-            throw new \InvalidArgumentException('invalid value for $auto_expire_days when calling SignRequestQuickCreate., must be smaller than or equal to 730.');
-        }
-        if (!is_null($auto_expire_days) && ($auto_expire_days < 1)) {
-            throw new \InvalidArgumentException('invalid value for $auto_expire_days when calling SignRequestQuickCreate., must be bigger than or equal to 1.');
-        }
-
-        $this->container['auto_expire_days'] = $auto_expire_days;
 
         return $this;
     }
