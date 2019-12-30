@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **subject** | **string** | Subject of SignRequest email | [optional] 
 **message** | **string** | Message to include in SignRequest email, may contain the following html tags: &#x60;a&#x60;, &#x60;abbr&#x60;, &#x60;acronym&#x60;, &#x60;b&#x60;, &#x60;blockquote&#x60;, &#x60;code&#x60;, &#x60;em&#x60;, &#x60;i&#x60;, &#x60;ul&#x60;, &#x60;li&#x60;, &#x60;ol&#x60;, and &#x60;strong&#x60; | [optional] 
 **who** | **string** | &#x60;m&#x60;: only me, &#x60;mo&#x60;: me and others, &#x60;o&#x60;: only others | [optional] 
-**send_reminders** | **bool** | Automatically remind signers to sign a document | [optional] 
+**send_reminders** | **bool** | Automatically remind signers to sign a document, see: [automatic reminders](#section/Working-with-a-SignRequest/Automatic-reminders) | [optional] 
 **signers** | [**\SignRequest\Model\Signer[]**](Signer.md) |  | [optional] 
 **uuid** | **string** |  | [optional] 
 
