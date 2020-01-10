@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **auto_delete_after** | [**\DateTime**](\DateTime.md) | Date and time calculated using &#x60;auto_delete_days&#x60; after which a finished document (signed/cancelled/declined) will be automatically deleted | [optional] 
 **sandbox** | **bool** | Indicates whether document was created as part of a sandbox team | [optional] 
 **auto_expire_after** | [**\DateTime**](\DateTime.md) | Date and time calculated using &#x60;auto_expire_days&#x60; after which a non finished document will be automatically expired | [optional] 
+**processing** | **bool** | Indicates whether a change to the document is processing and the PDF may be out of date. It is recommended to wait until processing has finished before downloading the PDF. Webhooks are not sent until processing has been completed. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
