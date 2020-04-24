@@ -4,6 +4,10 @@ API for [SignRequest.com](https://signrequest.com/)
 
 [![PHP version](https://badge.fury.io/ph/signrequest%2Fsignrequest-client.svg)](https://badge.fury.io/ph/signrequest%2Fsignrequest-client)
 
+## Example on how to use this
+
+https://github.com/SignRequest/signrequest-php-example
+
 ## Requirements
 
 PHP 5.5 and later
