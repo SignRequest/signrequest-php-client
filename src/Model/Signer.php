@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Signer
  *
@@ -43,17 +44,17 @@ class Signer implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'Signer';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'email' => 'string',
         'display_name' => 'string',
@@ -94,10 +95,10 @@ class Signer implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'email' => 'email',
         'display_name' => null,
@@ -347,9 +348,9 @@ class Signer implements ModelInterface, ArrayAccess
     const LANGUAGE_ES = 'es';
     const LANGUAGE_SV = 'sv';
     const LANGUAGE_RU = 'ru';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -376,7 +377,7 @@ class Signer implements ModelInterface, ArrayAccess
             self::LANGUAGE_RU,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -1549,5 +1550,3 @@ class Signer implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-

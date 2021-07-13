@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SignRequestQuickCreate
  *
@@ -43,17 +44,17 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'SignRequestQuickCreate';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'from_email' => 'string',
         'from_email_name' => 'string',
@@ -97,10 +98,10 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     ];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'from_email' => 'email',
         'from_email_name' => null,
@@ -353,9 +354,9 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
     const INTEGRATION_SALESFORCE = 'salesforce';
     const INTEGRATION_FORMDESK = 'formdesk';
     const INTEGRATION_ZAPIER = 'zapier';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -369,7 +370,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
             self::WHO_O,
         ];
     }
-    
+
     /**
      * Gets allowable values of the enum
      *
@@ -384,7 +385,7 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
             self::INTEGRATION_ZAPIER,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values
@@ -1628,6 +1629,17 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         unset($this->container[$offset]);
     }
 
+    public function getEmbedUrl()
+    {
+        foreach ($this->container['signers'] as $signer) {
+            if ($embedUrl = $signer->getEmbedUrl()) {
+                return $embedUrl;
+            }
+        }
+
+        return null;
+    }
+
     /**
      * Gets the string presentation of the object
      *
@@ -1645,5 +1657,3 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
-
