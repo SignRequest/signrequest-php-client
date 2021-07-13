@@ -1629,17 +1629,6 @@ class SignRequestQuickCreate implements ModelInterface, ArrayAccess
         unset($this->container[$offset]);
     }
 
-    public function getEmbedUrl()
-    {
-        foreach ($this->container['signers'] as $signer) {
-            if ($embedUrl = $signer->getEmbedUrl()) {
-                return $embedUrl;
-            }
-        }
-
-        return null;
-    }
-
     /**
      * Gets the string presentation of the object
      *
